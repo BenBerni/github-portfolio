@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Code </title>
+    <title>Code</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -37,8 +37,15 @@
         .copy-button {
             position: absolute; /* Added position */
             top: 10px; /* Adjusted top position */
-            right: 10px; /* Adjusted right position */
+            left: 10px; /* Adjusted left position */
             cursor: pointer;
+            background-color: #0366d6;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
         }
         .connection-explanation pre {
             max-height: 200px; /* Reduced maximum height */
@@ -61,10 +68,14 @@
                 <div class="inner">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
-                            <h1 class="text-center mb-5">Code </h1>
+                            <h1 class="text-center mb-5">Code</h1>
                             <!-- Connection Explanation -->
                             <div class="code-snippet connection-explanation">
                                 <h3>Connection Explanation</h3>
+                                <div class="copy-button" onclick="copyToClipboard('connection-explanation')">
+                                    Copy
+                                </div>
+
                                 <pre>
 
  HC05 Bluetooth module
@@ -106,14 +117,16 @@ voltage : GPA6
  RST : connected to 3.3V / no connection
  VCC : connected to 3.3V
 
-</code></pre>
-                                <div class="copy-button" onclick="copyToClipboard('connection-explanation')">
-                                    Copy
-                                </div>
+
                             </div>
                             <!-- Example 2 -->
                             <div class="code-snippet example-2">
                                 <h3>Full code and explain</h3>
+                                <div class="copy-button" onclick="copyToClipboard('example-2')">
+                                    Copy
+                                </div>
+                                <pre><code class="language-c">
+
                                 <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
@@ -910,13 +923,6 @@ stop=0;
     }
 }
 }
-
-</code></pre>
-
-                                <!-- Copy button for Example 2 -->
-                                <div class="copy-button" onclick="copyToClipboard('example-2')">
-                                    Copy
-                                </div>
                             </div>
    <div class="text-center mt-5">
         <a href="link_to_your_full_code.zip" download>
