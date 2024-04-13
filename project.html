@@ -87,11 +87,10 @@ GPIO - Relay 1, Relay 2, Led 1, Led2<br>
 ADC - LDR 1-4, ACS712, Voltage<br>
 • Four LDRs are connected to the microcontroller to determine the highest light intensity via ADC, enabling the solar panels to adjust accordingly (GPA1,GPA2,GPA3,GPA4).<br>
 • The ACS712 sensor measures current flow through its Hall effect sensor, outputting a voltage proportional to the current. <br>
-Two resistors create a voltage divider, which scales the output<br>
-voltage to a range suitable for the ADC input, ensuring accurate readings (GPA0).<br>
+Two resistors create a voltage divider, which scales the output voltage to a range suitable for the ADC input, ensuring accurate readings (GPA0).<br>
 • Voltage Sensor A simple circuit connected to an ADC channel measures the battery voltage. <br>The ADC converts this voltage into a digital value, which is then used to monitor the battery's health and charge level efficiently(GPA6).<br><br>
 
-Timer<br>
+Timer - Servo X axis, Servo Y axis<br>
 • Two timers control the movement of a servo motor (e.g., SG90):<br>
 • Servo Angle Control: Based on the timing set by the timers, the servo moves to specific angles:<br>
 • 100ms: -90 degrees.<br>
