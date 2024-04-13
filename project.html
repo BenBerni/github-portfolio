@@ -34,7 +34,6 @@
                                 The project is based on the NOVUTON 140 - ARM M0 microcontroller, programmed with Keil software.
                                 </p>
                             </blockquote>
-                                                        <img src="img/page2_pic1.jpg" alt="" class="margin1">
                         </div>
                         <div class="col-md-4">
                             <h2>Product Capabilities</h2>
@@ -52,8 +51,56 @@
                     <div class="row">
                         <!-- Additional Labels -->
                         <div class="col-md-12">
-                            <h2>Label 1</h2>
-                            <p>Example</p>
+
+                            <h2>Project Diagram And Explain</h2>
+                                                                                                                    <img src="img/digram.jpg" alt="">
+                                                                                                                                                <blockquote>
+                            <p>
+
+Charge and Discharge Module Integration
+<br>
+Solar to Battery Charging: The solar panel 5V and 10W conect into the module, which in turn charges a lithium battery 18650.<br>
+The charging process is regulated by the module, handling currents up to 1 ampere to ensure the battery charges safely and efficiently.<br>
+<br>
+
+Battery to Device Discharging: After the battery is charged, the module then manages the discharge of power from the battery to the connected devices.<br>
+It's designed to supply a stream of electricity, allowing for a discharge current ranging from 0.3 to 1 ampere, which is ideal for charging cell phones.<br><br>
+
+
+
+UART - HC-05 Bluetooth Module<br>
+• The Bluetooth module handles all communication tasks and is critical for operations.<br> It operates as an interrupt to ensure that communication has high priority through the (GPB0, GPB1).<br><br>
+
+SPI - RFID<br>
+• The RFID system allows secure access to our application. Users can log in by either using an RFID tag or entering a predefined password ("admin")  connect hrough the (GPC8, GPC9, GPC,11, GPC 10).<br><br>
+
+
+GPIO<br>
+• Our system includes two relays:<br>
+• Relay 1: Triggers to start charging the phone through the GPA 8 pin.<br>
+• Relay 2: Connects to the battery for voltage testing through the GPA 9 pin.<br>
+• LED indicators show connection status:<br>
+• Red LED: Indicates no connection ( GPA 10).<br>
+• Green LED: Indicates a successful connection (GPA11).<br>
+• A buzzer provides audible feedback during menu navigation, confirming that synchronization between the app and the micro controller.(GPB11).<br><br>
+
+ADC<br>
+• Four LDRs are connected to the microcontroller to determine the highest light intensity via ADC, enabling the solar panels to adjust accordingly (GPA1,GPA2,GPA3,GPA4).<br>
+• The ACS712 sensor measures current flow through its Hall effect sensor, outputting a voltage proportional to the current. <br>
+Two resistors create a voltage divider, which scales the output<br>
+voltage to a range suitable for the ADC input, ensuring accurate readings (GPA0).<br>
+• Voltage Sensor A simple circuit connected to an ADC channel measures the battery voltage. <br>The ADC converts this voltage into a digital value, which is then used to monitor the battery's health and charge level efficiently(GPA6).<br><br>
+
+Timer<br>
+• Two timers control the movement of a servo motor (e.g., SG90):<br>
+• Servo Angle Control: Based on the timing set by the timers, the servo moves to specific angles:<br>
+• 100ms: -90 degrees.<br>
+• 150ms: 0 degrees.<br>
+• 200ms: 90 degrees.<br>
+• The position of the servo is adjusted according to the data from the LDRs to optimize the solar<br>
+panel's orientation for maximum sunlight exposure.(GPA11,GPA12).<br>
+the Servo connected to external battery.                            <blockquote></p>
+
                             <h2>Label 2</h2>
                             <p>Example</p>
                             <h2>Label 3</h2>
