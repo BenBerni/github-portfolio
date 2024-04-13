@@ -67,16 +67,16 @@
                 <!--content-->
                 <div class="inner">
                     <div class="row">
-                       <div class="col-md-8 offset-md-2">
-    <h1 class="text-center mb-5">Code</h1>
-    <!-- Connection Explanation -->
-    <div class="code-snippet connection-explanation">
-        <h3>Connection Explanation</h3>
-        <div class="copy-button" onclick="copyToClipboard('connection-explanation')">
-            Copy
-        </div>
+                        <div class="col-md-8 offset-md-2">
+                            <h1 class="text-center mb-5">Code</h1>
+                            <!-- Connection Explanation -->
+                            <div class="code-snippet connection-explanation">
+                                <h3>Connection Explanation</h3>
+                                <div class="copy-button" onclick="copyToClipboard('connection-explanation')">
+                                    Copy
+                                </div>
 
-        <pre>
+                                <pre>
 
  HC05 Bluetooth module
  pin1 : KEY   N.C
@@ -116,16 +116,16 @@ voltage : GPA6
  GND : connected to Gnd
  RST : connected to 3.3V / no connection
  VCC : connected to 3.3V
-                                                        </div>
-                            <!-- Example 2 -->
-<div class="code-snippet example-2">
-    <h3>Full code and explain</h3>
-    <div class="copy-button" onclick="copyToClipboard('example-2')">
-        Copy
-    </div>
-    <pre><code class="language-c">
 
-#include &lt;stdio.h&gt;
+
+                            </div>
+                            <!-- Example 2 -->
+                            <div class="code-snippet example-2">
+                                <h3>Full code and explain</h3>
+                                <div class="copy-button" onclick="copyToClipboard('example-2')">
+                                    Copy
+                                </div>
+                                <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 #include &lt;stdlib.h&gt;
@@ -928,10 +928,12 @@ stop=0;
         </a>
     </div>
                         </div>
-
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+    
         function copyToClipboard(className) {
             const codeSnippet = document.querySelector(`.${className} pre`);
             const range = document.createRange();
