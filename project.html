@@ -59,11 +59,11 @@
 
 Charge and Discharge Module Integration
 <br>
-Solar to Battery Charging: The solar panel 5V and 10W conect into the module, which in turn charges a lithium battery 18650.<br>
+• Solar to Battery Charging: The solar panel 5V and 10W conect into the module, which in turn charges a lithium battery 18650.<br>
 The charging process is regulated by the module, handling currents up to 1 ampere to ensure the battery charges safely and efficiently.<br>
 <br>
 
-Battery to Device Discharging: After the battery is charged, the module then manages the discharge of power from the battery to the connected devices.<br>
+• Battery to Device Discharging: After the battery is charged, the module then manages the discharge of power from the battery to the connected devices.<br>
 It's designed to supply a stream of electricity, allowing for a discharge current ranging from 0.3 to 1 ampere, which is ideal for charging cell phones.<br><br>
 
 
@@ -72,10 +72,10 @@ UART - HC-05 Bluetooth Module<br>
 • The Bluetooth module handles all communication tasks and is critical for operations.<br> It operates as an interrupt to ensure that communication has high priority through the (GPB0, GPB1).<br><br>
 
 SPI - RFID<br>
-• The RFID system allows secure access to our application. Users can log in by either using an RFID tag or entering a predefined password ("admin")  connect hrough the (GPC8, GPC9, GPC,11, GPC 10).<br><br>
+• The RFID system allows secure access to our application.<br>Users can log in by either using an RFID tag or entering a predefined password ("admin")  connect through the (GPC8, GPC9, GPC,11, GPC 10).<br><br>
 
 
-GPIO<br>
+GPIO - Relay 1, Relay 2, Led 1, Led2<br>
 • Our system includes two relays:<br>
 • Relay 1: Triggers to start charging the phone through the GPA 8 pin.<br>
 • Relay 2: Connects to the battery for voltage testing through the GPA 9 pin.<br>
@@ -84,7 +84,7 @@ GPIO<br>
 • Green LED: Indicates a successful connection (GPA11).<br>
 • A buzzer provides audible feedback during menu navigation, confirming that synchronization between the app and the micro controller.(GPB11).<br><br>
 
-ADC<br>
+ADC - LDR 1-4, ACS712, Voltage<br>
 • Four LDRs are connected to the microcontroller to determine the highest light intensity via ADC, enabling the solar panels to adjust accordingly (GPA1,GPA2,GPA3,GPA4).<br>
 • The ACS712 sensor measures current flow through its Hall effect sensor, outputting a voltage proportional to the current. <br>
 Two resistors create a voltage divider, which scales the output<br>
@@ -99,7 +99,7 @@ Timer<br>
 • 200ms: 90 degrees.<br>
 • The position of the servo is adjusted according to the data from the LDRs to optimize the solar<br>
 panel's orientation for maximum sunlight exposure.(GPA11,GPA12).<br>
-the Servo connected to external battery.                            <blockquote></p>
+• the Servo connected to external battery.                            <blockquote></p>
 
                             <h2>Label 2</h2>
                             <p>Example</p>
