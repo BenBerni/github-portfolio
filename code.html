@@ -34,12 +34,22 @@
             white-space: pre-wrap;
             overflow-y: auto; /* Enable vertical scrollbar if needed */
         }
-        .copy-button {
-            position: absolute; /* Added position */
-            top: 10px; /* Adjusted top position */
-            right: 10px; /* Adjusted right position */
-            cursor: pointer;
-        }
+.copy-button {
+    /* Existing styles */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background-color: #0366d6;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    /* New style for making the text bold */
+    font-weight: bold; /* This makes the text bold */
+}
+</style>
+
         .connection-explanation pre {
             max-height: 200px; /* Reduced maximum height */
             overflow-y: auto; /* Enable vertical scrollbar if needed */
@@ -113,11 +123,12 @@ voltage : GPA6
 
                             </div>
                             <!-- Example 2 -->
-                                <div class="copy-button" onclick="copyToClipboard('example-2')">
-                                    Copy
-                                </div>
+
                             <div class="code-snippet example-2">
                                 <h3>Full code and explain</h3>
+                                                                <div class="copy-button" onclick="copyToClipboard('example-2')">
+                                    Copy
+                                </div>
                                 <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
