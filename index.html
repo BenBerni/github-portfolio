@@ -1,116 +1,106 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Welcome</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="Embedded project">
-    <meta name="keywords" content="Your keywords">
-    <meta name="author" content="Ben Berni">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-   	<script src="js/include_script.js"></script>
-    <!--[if lt IE 8]><div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div><![endif]-->
-  	<!--[if lt IE 9]>
-	   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	    <link href="css/ie.css" rel="stylesheet">
-    <![endif]-->
+  <title>Project Overview</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-size: 18px;
+    }
+    .header, .content {
+      padding: 104px;
+    }
+    .header h1 {
+      font-size: 60px;
+    }
+    .w3-padding-32 {
+      padding: 32px !important;
+    }
+    .project-img {
+      width: 100%;
+      height: auto;
+    }
+    .project-description {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-top: 16px;
+      padding: 16px;
+    }
+    .navbar-space {
+      margin-bottom: 20px;
+    }
+    .header-space {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-<!--web site spinner-->
-	<div id="webSiteLoader"></div>
-<!--button back top-->
-	<div id="back-top"></div>
-<!--page spinner-->
-	<div id="pageLoader"></div>
-    <div id="imgSpinner"></div>
-<div id="galleryHolder">
-    <div id="imageHolder">
-        <img src="img/bg_pic1.jpg" alt="">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top navbar-space">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>My Projects</b> By Ben Berni</a>
+  </div>
+</div>
+
+<header class="w3-display-container w3-content w3-wide header header-space" style="max-width:100%" id="home">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 style="font-size: 70px;" class="w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>My Projects</b></span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding content" style="max-width:1764px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+
+    <!-- Project 1 -->
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-col l6 m6">
+        <div class="w3-display-container">
+          <a href="https://micro-fluidics.github.io/github-Project/">
+            <img src="micro-Fluidic.png" alt="Project 1" class="project-img">
+          </a>
+          <div class="w3-display-bottomleft w3-black w3-padding">Microfluidic Bacterial Analysis System</div>
+        </div>
+        <div class="w3-container w3-padding-16 project-description">
+          <p>
+            Designed and developed an automated system to detect bacterial growth using OD600 sensors. <br>Utilized an STM32F446RE microcontroller and an ESP32 module for server.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="w3-col l6 m6">
+        <div class="w3-display-container">
+          <a href="https://project-solar1.github.io/Solar-Data/">
+            <img src="solar.png" alt="Project 2" class="project-img">
+          </a>
+          <div class="w3-display-bottomleft w3-black w3-padding">Solar Charging System</div>
+        </div>
+        <div class="w3-container w3-padding-16 project-description">
+          <p>
+            Designed and developed a solar charging system with integrated battery storage to ensure a continuous power supply, enabling consistent device charging. Utilized a NOVUTON 140 - ARM M0+ microcontroller.
+          </p>
+        </div>
+      </div>
     </div>
-</div>
-<div id="inner">
-    <ul>
-        <li><a href="#"><img src="img/bg_pic1.jpg" alt="Gallery image 1"></a></li>
-        <li><a href="#"><img src="img/bg_pic2.jpg" alt="Gallery image 2"></a></li>
-        <li><a href="#"><img src="img/bg_pic3.jpg" alt="Gallery image 3"></a></li>
-    </ul>
-</div>
-<!--content wrapper-->
-	<div id="wrapper">
-        <div id="contentBg"><div></div></div>
-<!--header-->
-		<header>
-<!--logo and company name-->
-            <div class="container">		
-                <div class="row">
-                    <div class="span12">
-                        <h1 class="brand"><a href="index.html"><img src="img/logo.png" alt="solar solar energy">solar solar energy</a></h1>
-<!--menu-->
-                        <div class="navbar">
-                            <div class="navbar-inner">
-                                <ul class="sf-menu">
-                                    <li><a href="index.html"><span>Main</span></a></li>
-                                    <li><a href="project.html"><span>Project</span></a></li>
-                                    <li><a href="code.html"><span>Code</span></a></li>
-                                    <li><a href="about.html"><span>Contact</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-<!--content-->	
-		<section class="container">
-            <div>
-                <div class="dynamicContent">
-                    <div class="inner2">
-                        <div class="row">
-                            <div class="span6">
-                                <img src="img/page1_pic1.jpg" alt="">
-<p class="slogan" style="line-height: 0.8; margin: 0; padding: 0;">
-  <span style="display: block; font-size: 100px; letter-spacing: normal; margin-top: 20px;">Solar Project</span>
-  <span style="display: block; letter-spacing: 5px; font-size: 30px;">by Ben Berni.</span>
-</p>
-
-
-
-
-
-                            </div>
-                            <div class="span6">
-                                <div class="block1">
-                                    <div>
-                                        <h2>The Idea</h2>
-                                        <p>A system for charging cell phones based on energy from a solar panel.<br>
-To produce maximum solar energy, the system changes the direction of the panel according to the direction of the sun.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
   
-        </section>
-<!--footer-->	
-		<footer>
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <ul class="soc_icons">
-<li><a href="mailto:benberni1@gmail.com"><span><img src="img/soc_icon3.png" alt=""></span><span><img src="img/soc_icon3.png" alt=""></span></a></li>
-                            <li><a href="https://www.linkedin.com/in/ben-berni-57453a255/"><span><img src="img/soc_icon4.png" alt=""></span><span><img src="img/soc_icon4.png" alt=""></span></a></li>
-                        </ul>
-                </div>
-            </div>
-		</footer>		
-	</div>
-	<script src="js/bootstrap.js"></script>
-<!-- coded by Smart -->
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p><br><br><br></p>
+</footer>
+
 </body>
 </html>
+
