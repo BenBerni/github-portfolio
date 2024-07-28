@@ -1,112 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Project Overview</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Overview</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body, html {
       height: 100%;
       margin: 0;
-      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #f8f9fa;
     }
+    .navbar {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar .w3-bar a {
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: background-color 0.3s ease;
+    }
+    .navbar .w3-bar a:hover {
+      background-color: #e0e0e0;
+    }
+   
     .header, .content {
-      padding: 104px;
+      padding: 54px;
     }
     .header h1 {
+          text-align: center;
+
       font-size: 60px;
     }
-    .w3-padding-32 {
-      padding: 32px !important;
-    }
-    .project-img {
-      width: 100%;
-      height: auto;
-      max-width: 674px;
-      max-height: 505px;
-      object-fit: cover;
+    .project-section {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      align-items: center;
+      gap: 20px;
     }
     .project-description {
-      font-size: 20px;
+      flex: 1;
+      font-size: 18px;
       line-height: 1.6;
-      margin-top: 16px;
-      padding: 16px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      min-width: 300px;
+      transition: transform 0.3s ease;
     }
-    .navbar-space {
-      margin-bottom: 20px;
+    .project-description:hover {
+      transform: translateY(-5px);
     }
-    .header-space {
-      margin-top: 20px;
+    .project-img-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    .fixed-img-size {
-      width: 100%; /* Responsive width */
-      height: 505px; /* Fixed height */
-      object-fit: cover; /* Maintain aspect ratio */
+    .project-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .project-img-container:hover img {
+      transform: scale(1.05);
+    }
+    .w3-display-bottomleft {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      border-radius: 0 0 8px 8px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .note {
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-description a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .project-description a:hover {
+      color: #388E3C;
+    }
+    @media (max-width: 768px) {
+      .project-section {
+        flex-direction: column;
+      }
+      .project-description {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .project-img-container {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top navbar-space">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+<div class="navbar w3-top">
+  <div class="w3-bar w3-wide w3-padding">
     <a href="#home" class="w3-bar-item w3-button"><b>My Projects</b> By Ben Berni</a>
   </div>
 </div>
 
-<header class="w3-display-container w3-content w3-wide header header-space" style="max-width:100%" id="home">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 style="font-size: 70px;" class="w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>My Projects</b></span></h1>
-  </div>
+<header class="header" id="home">
+  <h1>My Projects</h1>
 </header>
 
 <!-- Page content -->
-<div class="w3-content w3-padding content" style="max-width:1764px">
+<div class="content" id="projects">
 
   <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-
-    <!-- Project 1 -->
-    <div class="w3-row-padding w3-margin-bottom">
-      <div class="w3-col l6 m6">
-        <div class="w3-display-container">
-          <a href="https://micro-fluidics.github.io/github-Project/">
-            <img src="micro-Fluidic.png" alt="Project 1" class="project-img fixed-img-size">
-          </a>
-          <div class="w3-display-bottomleft w3-black w3-padding">Microfluidic Bacterial Analysis System</div>
-        </div>
-        <div class="w3-container w3-padding-16 project-description">
-          <p>
-            Designed and developed an automated system to detect bacterial growth using OD600 sensors. <br>Utilized an STM32F446RE microcontroller and an ESP32 module for server.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="w3-col l6 m6">
-        <div class="w3-display-container">
-          <a href="https://project-solar1.github.io/Solar-Data/">
-            <img src="solar.png" alt="Project 2" class="project-img fixed-img-size">
-          </a>
-          <div class="w3-display-bottomleft w3-black w3-padding">Solar Charging System</div>
-        </div>
-        <div class="w3-container w3-padding-16 project-description">
-          <p>
-            Designed and developed a solar charging system with integrated battery storage to ensure a continuous power supply, enabling consistent device charging. Utilized a NOVUTON 140 - ARM M0+ microcontroller.
-          </p>
-        </div>
-      </div>
+  <div class="project-section">
+    <div class="project-description">
+      <p>Designed and developed an automated system to detect bacterial growth using OD600 sensors. <br>Utilized an STM32F446RE microcontroller and an ESP32 module for server. <br><a href="https://micro-fluidics.github.io/github-Project/">Learn more about this project</a></p>
     </div>
-  
+    <div class="project-img-container">
+      <a href="https://micro-fluidics.github.io/github-Project/">
+        <img src="micro-Fluidic.png" alt="Project 1">
+        <div class="w3-display-bottomleft">Microfluidic Bacterial Analysis System (Newest)</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Project Section -->
+  <div class="project-section">
+    <div class="project-description">
+      <p>Designed and developed a solar charging system with integrated battery storage to ensure a continuous power supply, enabling consistent device charging. Utilized a NOVUTON 140 - ARM M0+ microcontroller. <br><a href="https://project-solar1.github.io/Solar-Data/">Learn more about this project</a></p>
+    </div>
+    <div class="project-img-container">
+      <a href="https://project-solar1.github.io/Solar-Data/">
+        <img src="solar.png" alt="Project 2">
+        <div class="w3-display-bottomleft">Solar Charging System</div>
+      </a>
+    </div>
   </div>
 
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p><br><br><br></p>
+<footer class="footer">
+  <p>© 2024 Ben Berni. All rights reserved.</p>
 </footer>
 
 </body>
